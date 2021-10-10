@@ -64,4 +64,4 @@ to run the tests for this application, enter "npm run test" in the command line
 [![Video for My Team app](./src/images/video-thumbnail.mp4)](./video.html)
 
 ## Deployed application link
-https://github.com/amykep/team-profile-generator
+https://amykep.github.io/team-profile-generator/
