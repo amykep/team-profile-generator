@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: rgb(4, 104, 204);
+    --secondary: rgb(252, 252, 252);
+    --third: rgb(124, 124, 124);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+    background-color:rgb(204, 6, 6);
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.container {
+    margin: auto;
+    justify-content:center;
+    display: flex;
+    flex-wrap: wrap;
+    flex:3 30%;
+}
+.flex-item {
+    border-radius: 4px;
+    border: 1px solid #393b4f;
+    box-shadow: 5px 10px;
+    background-color: var(--secondary);
+    color: var(--third);
+    padding: 5px;
+    margin: 10px;
+  
+  }
+
+h1{
+    color: var(--secondary);
+    text-align: center;
+    font-size:x-large;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.card-header {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 5px;
+}
+
+.card-body {
+    background-color: var(--secondary);
+    color: var(--third);
+    padding: 5px;
+}
+
+#icon{
+    padding-right: 3px;
+}

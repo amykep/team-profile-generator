@@ -55,3 +55,6 @@ Once the application runs, it will generate an index.html file in the "dist" fol
 ## Tests
 to run the tests for this application, enter "npm run test" in the command line
 ![Screenshot of passing tests](./src/images/tests.png)
+
+## Deployed application link
+https://github.com/amykep/team-profile-generator

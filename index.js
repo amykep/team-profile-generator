@@ -1,12 +1,16 @@
 // Required node packages
 const inquirer = require("inquirer");
 const fs = require("fs");
+const path = require("path");
+
 
 // Required classes
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
-
+const renderHTML = require("./lib/generateHTML");
+const generateHTML = require("./lib/generateHTML");
+const { Console } = require("console");
 
 // Questions array for all employees
 let employeesArr = [];
@@ -31,7 +35,7 @@ const questions = [
         type: "list",
         name: "role",
         message: "What role does this employee have?",
-        choices: ["Engineer", "Intern", "Manager"]
+        choices: ["Manager", "Engineer", "Intern"]
     }
 ]
 
@@ -150,6 +154,7 @@ function newEmployee()
 
 // Function to check if you would like to add an employee. 
 // When you finish and enter no, it will generate the index.html file
+
 function nextEmployee()
 {
     inquirer.prompt({
@@ -164,9 +169,20 @@ function nextEmployee()
         {
             newEmployee();
         }
+        else if (createEmployee === false)
+        {
+            // console.log(employeesArr)
+            console.log("Your team profile has been successfully created! Please check out the index.html at the dist folder")
+            fs.writeFile("./dist/index.html", generateHTML(employeesArr), err =>
+            {
+                if (err)
+                {
+                    console.log(err)
+                }
+            })
 
+        }
     })
-
 };
 // Function call to initialize app
 init();
